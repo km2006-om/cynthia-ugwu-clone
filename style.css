@@ -1,0 +1,306 @@
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+/* Cursor */
+#cursorOuter, #cursorInner {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+}
+
+#cursorOuter {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease;
+}
+
+#cursorInner {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease;
+}
+
+/* Navbar */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.menu-toggle:hover {
+  opacity: 0.8;
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.bounding {
+  overflow: hidden;
+}
+
+.km {
+  font-size: 9vw;
+  transform: translateY(100%);
+  opacity: 0;
+  margin: 0;
+  line-height: 0.9;
+  font-weight: 600;
+}
+
+.small-text {
+  font-size: 1.2vw;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+/* Hero Footer */
+.hero-footer {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.hero-footer a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.hero-footer a:hover {
+  opacity: 1;
+}
+
+/* Projects Section */
+.projects {
+  margin-top: 14vw;
+  padding: 0 2vw;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d6d0d0;
+  padding: 2rem 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+}
+
+.project:hover {
+  transform: translateX(2%);
+}
+
+.project h1 {
+  font-size: 7.6vw;
+  color: white;
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.project h5 {
+  font-size: 1.1vw;
+  color: white;
+  margin: 0;
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+/* About Section */
+.about {
+  background-color: #000;
+  color: #fff;
+  padding: 10vw 8vw;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex-shrink: 0;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.about-text h4 {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.about-btn {
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 6vw 8vw;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 4vw;
+}
+
+.youtube-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.youtube-link span {
+  margin-left: 0.5rem;
+}
+
+.youtube-link:hover {
+  opacity: 0.6;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border-top: 1px solid #444;
+  padding-top: 2vw;
+}
+
+.footer-left p {
+  margin: 0;
+  font-weight: 300;
+}
+
+.footer-right {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-right a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.footer-right a:hover {
+  opacity: 0.6;
+}
+.hover-image {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.project:hover .hover-image {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
